@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="FSGI Geofs Fachschaft Geoinformatik Münster Sitzungsprotokolle">
+    <title>Protokolle</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic" crossorigin="anonymous"> -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css" as="style"
+        crossorigin="anonymous">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css" as="style"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"
+        crossorigin="anonymous">
+    <!-- <link rel="preload" href="https://cdn.jsdelivr.net/npm/picnic" as="style" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/picnic" crossorigin="anonymous"> -->
+    <!-- <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/min/1.5.0/entireframework.min.css" as="style" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/min/1.5.0/entireframework.min.css" crossorigin="anonymous"> -->
+    <!-- <link rel="preload" href="https://cdn.jsdelivr.net/npm/sscaffold-css@0.1.1/sscaffold.min.css" integrity="sha256-tNrNp6fPTVnhpywTjgNV4jCx6W9d1wuALpwVmAQEYcs=" as="style" crossorigin="anonymous"> 
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sscaffold-css@0.1.1/sscaffold.min.css" integrity="sha256-tNrNp6fPTVnhpywTjgNV4jCx6W9d1wuALpwVmAQEYcs=" crossorigin="anonymous"> -->
+    <link rel="stylesheet" media="bogus">
+    <link rel="stylesheet" href="styles.css">
+    
+    <script src="main.js"></script>
+
+    <link id="idx-theme" rel="stylesheet" href="https://cdn.jsdelivr.net/npm/milligram-themes@0.0.2/src/black.min.css"
+        crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="load">
+        <div class="lds"></div>
+    </div>
+    <header>
+        <ul>
+            <li>
+                <span class="material-icons" style="font-size: 36px;">drive_file_move</span>
+                <span id="idx-path"></span>
+            </li>
+            <li>
+                <span class="material-icons">filter_alt</span>
+                <input id="idx-filter" type="text" placeholder="Filter">
+            </li>
+        </ul>
+    </header>
+    <main>
+        <section></section>
+        <article>
+            <table>
+                <thead>
+                    <tr>
+                        <th class="header"></th>
+                        <th class="header">Name</th>
+                        <th class="header">Date</th>
+                        <th class="header">Size</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </article>
+    </main>
+    <footer>
+        <div id="idx-json">
+        </div>
+    </footer>
+</body>
+
+</html>
