@@ -1,7 +1,7 @@
 const cfg = {
-    server_base_url: "https://giv-geofs.uni-muenster.de",  // Specify URL to server here
-    endpoint: "protokolle_json",  // specify endpoint to render
-    page_title_base: "Protokolle"
+    server_base_url: "https://nginx-server-url.com",  // Specify URL to server here
+    endpoint: "endpoint_json",  // specify endpoint to render
+    page_title_base: "Title"
 }
 
 window.$ = document.querySelector.bind(document);
@@ -186,7 +186,7 @@ function setData(a = [], n = [0, 0, 0, 0], p = 15000, m = 1, c = 'table tbody', 
         dir_name = directories[i].name
         dir_date = new Date(directories[i].mtime).toLocaleString(window.language)
 
-        tblHtm += `<tr onclick=onDirectoryClick(${dir_name})>
+        tblHtm += `<tr onclick="onDirectoryClick('${encodeURIComponent(dir_name)}')">
                     <td><span class="material-icons" title="Folder">folder</span><span style="display:none">${type}</span></td>
                     <td>${dir_name}</td>
                     <td>${dir_date}</td>
@@ -201,7 +201,7 @@ function setData(a = [], n = [0, 0, 0, 0], p = 15000, m = 1, c = 'table tbody', 
         file_date = new Date(files[i].mtime).toLocaleString(window.language)
         file_size = files[i].size
 
-        tblHtm += `<tr onclick=onFileClick("${file_name}")>
+        tblHtm += `<tr onclick="onFileClick('${encodeURIComponent(file_name)}')">
                     <td><span class="material-icons" title="File">insert_drive_file</span><span style="display:none">${type}</span></td>
                     <td>${file_name}</td>
                     <td>${file_date}</td>
